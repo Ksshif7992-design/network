@@ -59,7 +59,7 @@ const Finance: React.FC<FinanceProps> = ({ initialTab }) => {
             {activeTab === 'wallet' && (
                <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                   <div className="lg:col-span-1 space-y-6">
-                     <Card className="bg-gradient-to-br from-indigo-900/40 to-blue-900/40 border-indigo-500/30">
+                     <Card className="bg-linear-to-br from-indigo-900/40 to-blue-900/40 border-indigo-500/30">
                         <p className="text-[10px] font-black text-indigo-300 uppercase tracking-widest mb-4">Master Ledger Balance</p>
                         <h2 className="text-4xl font-black text-white">$452,109.80</h2>
                         <div className="mt-4 flex items-center gap-1 text-[10px] font-bold text-green-500">

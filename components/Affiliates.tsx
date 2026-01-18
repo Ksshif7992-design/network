@@ -179,8 +179,8 @@ const Affiliates: React.FC<AffiliatesProps> = ({ initialTab }) => {
 
                           {activeActionMenu === aff.id && (
                             <>
-                              <div className="fixed inset-0 z-[290]" onClick={() => setActiveActionMenu(null)}></div>
-                              <div className="absolute right-0 top-full mt-2 w-56 bg-gray-950 border border-gray-700 rounded-xl shadow-2xl z-[300] overflow-hidden border-t-2 border-t-blue-500 text-left">
+                              <div className="fixed inset-0 z-290" onClick={() => setActiveActionMenu(null)}></div>
+                              <div className="absolute right-0 top-full mt-2 w-56 bg-gray-950 border border-gray-700 rounded-xl shadow-2xl z-300 overflow-hidden border-t-2 border-t-blue-500 text-left">
                                 <div className="p-2 space-y-1">
                                   <button className="w-full flex items-center gap-3 px-4 py-2 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-blue-400 hover:bg-blue-400/5 rounded-lg transition-all">
                                     <LogIn size={14} /> Login As Affiliate
@@ -191,7 +191,7 @@ const Affiliates: React.FC<AffiliatesProps> = ({ initialTab }) => {
                                   <button className="w-full flex items-center gap-3 px-4 py-2 text-[10px] font-black uppercase tracking-widest text-gray-400 hover:text-blue-400 hover:bg-blue-400/5 rounded-lg transition-all">
                                     <History size={14} /> Activity Logs
                                   </button>
-                                  <div className="h-[1px] bg-gray-800 my-1 mx-2"></div>
+                                  <div className="h-px bg-gray-800 my-1 mx-2"></div>
                                   <button className="w-full flex items-center gap-3 px-4 py-2 text-[10px] font-black uppercase tracking-widest text-red-500 hover:bg-red-500/10 rounded-lg transition-all">
                                     <ShieldAlert size={14} /> Suspend Access
                                   </button>
@@ -208,7 +208,7 @@ const Affiliates: React.FC<AffiliatesProps> = ({ initialTab }) => {
             </Card>
 
             {selectedAffs.length > 0 && (
-              <div className="fixed bottom-10 left-1/2 -translate-x-1/2 bg-gray-950 border border-blue-500/50 shadow-2xl rounded-2xl p-4 flex items-center gap-6 animate-in slide-in-from-bottom-10 z-[200]">
+              <div className="fixed bottom-10 left-1/2 -translate-x-1/2 bg-gray-950 border border-blue-500/50 shadow-2xl rounded-2xl p-4 flex items-center gap-6 animate-in slide-in-from-bottom-10 z-200">
                 <div className="flex items-center gap-2 border-r border-gray-800 pr-6 mr-2">
                   <span className="bg-blue-600 text-white w-6 h-6 rounded-lg flex items-center justify-center text-[10px] font-black">{selectedAffs.length}</span>
                   <span className="text-[10px] font-black text-gray-400 uppercase tracking-widest text-nowrap">Selected</span>
@@ -275,7 +275,7 @@ const Affiliates: React.FC<AffiliatesProps> = ({ initialTab }) => {
         {activeTab === 'referral' && (
           <div className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <Card className="bg-gradient-to-br from-indigo-900/30 to-blue-900/30 border-blue-500/20">
+              <Card className="bg-linear-to-br from-indigo-900/30 to-blue-900/30 border-blue-500/20">
                 <p className="text-[10px] font-black text-blue-400 uppercase tracking-widest mb-4">Total Referral Earnings</p>
                 <h3 className="text-3xl font-black text-white font-mono">$12,840.00</h3>
                 <div className="mt-4 flex items-center gap-2 text-[10px] font-black text-green-500">
@@ -427,7 +427,7 @@ const Affiliates: React.FC<AffiliatesProps> = ({ initialTab }) => {
 
       {/* Affiliate Creation Modal */}
       {showInviteModal && (
-        <div className="fixed inset-0 bg-black/80 backdrop-blur-md z-[500] flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-md z-500 flex items-center justify-center p-4">
           <Card className="w-full max-w-2xl border-t-4 border-blue-600 shadow-2xl bg-gray-900" noPadding>
             <div className="flex justify-between items-center p-6 border-b border-gray-800">
               <div className="flex items-center gap-3">
@@ -506,14 +506,14 @@ const Affiliates: React.FC<AffiliatesProps> = ({ initialTab }) => {
 
       {/* Map Modal */}
       {showMapModal && (
-        <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-[500] flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-black/90 backdrop-blur-md z-500 flex items-center justify-center p-4">
           <Card className="w-full max-w-4xl border-transparent shadow-2xl bg-gray-900" noPadding>
             <div className="flex justify-between items-center p-6 border-b border-gray-800">
               <h3 className="text-sm font-black text-gray-100 uppercase tracking-tight">Geospatial Distribution</h3>
               <button onClick={() => setShowMapModal(false)} className="p-2 bg-gray-800 text-gray-400 hover:text-white rounded-lg" title="Close modal"><X size={18} /></button>
             </div>
             <div className="p-10 flex flex-col items-center justify-center min-h-[400px]">
-              <div className="relative w-full max-w-2xl aspect-[2/1] bg-gray-950 rounded-3xl border border-gray-800 overflow-hidden flex items-center justify-center group">
+              <div className="relative w-full max-w-2xl aspect-2/1 bg-gray-950 rounded-3xl border border-gray-800 overflow-hidden flex items-center justify-center group">
                 <Globe size={80} className="text-blue-600/20 mb-4 animate-pulse" />
                 <div className="absolute inset-0 flex items-center justify-center">
                   <p className="text-[10px] font-black text-blue-500 uppercase tracking-widest border border-blue-500/20 px-4 py-2 rounded-full bg-blue-500/5">Scanning Density...</p>

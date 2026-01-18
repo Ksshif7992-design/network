@@ -90,8 +90,8 @@ const Dashboard: React.FC = () => {
         <Card title="NETWORK PERFORMANCE" noPadding className="border-t-2 border-t-blue-500 bg-[#161d2a]">
           <div className="flex flex-col items-center justify-center p-6 min-h-[260px]">
             <div className="relative w-32 h-32 flex items-center justify-center mb-6">
-              <div className="absolute inset-0 rounded-full border-[10px] border-gray-950 shadow-inner"></div>
-              <div className="absolute inset-0 rounded-full border-[10px] border-blue-600/20 border-t-blue-500 border-l-blue-500 rotate-[35deg]"></div>
+              <div className="absolute inset-0 rounded-full border-10 border-gray-950 shadow-inner"></div>
+              <div className="absolute inset-0 rounded-full border-10 border-blue-600/20 border-t-blue-500 border-l-blue-500 rotate-35"></div>
               <div className="text-center z-10">
                 <p className="text-xl font-black text-white">$1.25M</p>
                 <p className="text-[7px] font-bold text-gray-500 uppercase tracking-widest">Revenue</p>
@@ -145,7 +145,7 @@ const Dashboard: React.FC = () => {
 
             <div className="mt-auto pt-4 border-t border-gray-800 flex justify-between items-center">
               <span className="text-[8px] font-black text-gray-600 uppercase tracking-widest italic leading-none">PERFORMANCE</span>
-              <span className="text-[8px] font-black text-green-500 uppercase tracking-widest leading-none font-black">TIER 1 ELITE</span>
+              <span className="text-[8px] font-black text-green-500 uppercase tracking-widest leading-none">TIER 1 ELITE</span>
             </div>
           </div>
         </Card>
@@ -170,7 +170,7 @@ const Dashboard: React.FC = () => {
 
             <div className="mt-auto pt-4 border-t border-gray-800 flex justify-between items-center">
               <span className="text-[8px] font-black text-gray-600 uppercase tracking-widest italic flex items-center gap-1 leading-none"><RotateCw size={10} className="animate-spin-slow" /> PENDING</span>
-              <span className="text-[8px] font-black text-yellow-500 uppercase tracking-widest leading-none font-black">12 REVIEWS</span>
+              <span className="text-[8px] font-black text-yellow-500 uppercase tracking-widest leading-none">12 REVIEWS</span>
             </div>
           </div>
         </Card>

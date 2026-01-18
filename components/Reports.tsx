@@ -119,7 +119,7 @@ const Reports: React.FC<ReportsProps> = ({ initialTab }) => {
             <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 rounded-lg text-sm font-black uppercase tracking-widest transition-all shadow-lg active:scale-95">
               <CalendarIcon size={16} /> {dateRange} <ChevronDown size={14} />
             </button>
-            <div className="absolute right-0 top-full mt-2 w-64 bg-gray-900 border border-gray-700 rounded-xl hidden group-hover:block z-[100] shadow-2xl overflow-hidden border-t-2 border-t-blue-500">
+            <div className="absolute right-0 top-full mt-2 w-64 bg-gray-900 border border-gray-700 rounded-xl hidden group-hover:block z-100 shadow-2xl overflow-hidden border-t-2 border-t-blue-500">
               {['Today', 'Yesterday', 'Last 7 Days', 'MTD'].map(p => (
                 <button key={p} onClick={() => setDateRange(p)} className="w-full text-left px-5 py-3 text-[10px] font-black text-gray-400 uppercase tracking-widest hover:bg-gray-800 border-b border-gray-800 last:border-none">{p}</button>
               ))}
@@ -199,7 +199,7 @@ const PerformanceReport = ({ isComparing, groupBy }: { isComparing: boolean, gro
           { label: 'Conversions', val: '8,210', change: '+14%', icon: <Zap size={14} /> },
           { label: 'Overall EPC', val: '$1.84', change: '+2%', icon: <Target size={14} /> },
         ].map((s, i) => (
-          <Card key={i} className="p-5 border-transparent bg-gray-900/40 border border-gray-800 hover:border-blue-500/20 transition-all group shadow-none">
+          <Card key={i} className="p-5 border-transparent bg-gray-900/40 border hover:border-blue-500/20 transition-all group shadow-none">
             <div className="flex justify-between items-center mb-1">
               <p className="text-[10px] uppercase font-black text-gray-600 tracking-widest">{s.label}</p>
               <span className="text-gray-700 group-hover:text-blue-500 transition-colors">{s.icon}</span>
